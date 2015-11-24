@@ -66,6 +66,7 @@ It is necessary to use an external library, like [geojson-area](https://www.npmj
 
 ### Find the closest object
 
+To find the objects closest to a geographical object, we use MongoDB's [$near](https://docs.mongodb.org/manual/reference/operator/query/near/) operator.
 The following query will return the object closest to the coordinates of `pedestrian2`:
 
 ```
@@ -78,6 +79,7 @@ db.test.find({ "name": { "$ne": "pedestrian2" }, "geom": { "$near": { "$geometry
 
 ### Find the objects within
 
+To find the objects within a geographical object, we use MongoDB's [$geoWithin](https://docs.mongodb.org/manual/reference/operator/query/geoWithin/) operator.
 The following query will return the objects within the polygon of `building2`:
 
 ```
