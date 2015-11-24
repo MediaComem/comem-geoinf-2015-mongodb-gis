@@ -60,7 +60,7 @@ db.test.insert({ "name" : "bordureRoute2", "geom": { "type": "LineString", "coor
 MongoDB cannot calculate the area of polygons at this time.
 It is necessary to use an external library, like [geojson-area](https://www.npmjs.com/package/geojson-area) for Node.js.
 
-[Node.js example](index.js#L164-L177).
+[Node.js example](index.js#L165-L178).
 
 
 
@@ -73,7 +73,7 @@ The following query will return the object closest to the coordinates of `pedest
 db.test.find({ "name": { "$ne": "pedestrian2" }, "geom": { "$near": { "$geometry": { "type": "point", "coordinates": [ 30, 30 ] } } } }).limit(1)
 ```
 
-[Node.js example](index.js#L188-L197).
+[Node.js example](index.js#L189-L198).
 
 
 
@@ -86,7 +86,7 @@ The following query will return the objects within the polygon of `building2`:
 db.test.find({ "name": { "$ne": "building2" }, "geom": { "$geoWithin": { "$geometry": { "type": "Polygon", "coordinates": [ [ [ 40, 10 ], [ 30, 20 ], [ 40, 30 ], [ 35, 40 ], [ 60, 50 ], [ 80, 35 ], [ 60, 20 ], [ 40, 10 ] ] ] } } } });
 ```
 
-[Node.js example](index.js#L215-L224)
+[Node.js example](index.js#L216-L225)
 
 
 

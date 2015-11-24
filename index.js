@@ -8,6 +8,7 @@ var db,
     uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/mongodb-geospatial-queries';
 
 // This array contains documents with a unique "name" property and GeoJSON data in the "geom" property.
+// This data will be used to run queries for the purposes of the exercise.
 // GeoJSON reference: http://geojson.org/geojson-spec.html
 var documents = [
   {
