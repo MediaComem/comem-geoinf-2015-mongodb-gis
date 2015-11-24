@@ -75,12 +75,16 @@ var documents = [
   }
 ];
 
+// Find the objects used in the exercise.
 var pedestrian2 = _.findWhere(documents, { name: 'pedestrian2' }),
     building2 = _.findWhere(documents, { name: 'building2' });
 
+// Prepare functions for the exercise's examples.
 var findClosestObjectToPedestrian2 = _.bind(findClosestObject, null, pedestrian2),
     findObjectsWithinBuilding2 = _.bind(findObjectsWithin, null, building2);
 
+// Perform the exercise and log the results to the console.
+// Read on to see the implementation of these functions.
 async.waterfall([
   connect,
   clearData,

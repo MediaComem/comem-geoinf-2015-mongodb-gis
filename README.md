@@ -93,7 +93,7 @@ db.test.find({ "name": { "$ne": "building2" }, "geom": { "$geoWithin": { "$geome
 <a name="demo"></a>
 ## Demo Script
 
-This repository contains a Node.js script that performs the exercise and logs the results on the command line.
+This repository contains a [Node.js script](index.js) that performs the exercise and logs the results on the command line.
 
 It requires [Node.js](https://nodejs.org) to be installed, and [MongoDB](https://www.mongodb.org) to be installed and running on the default port.
 
